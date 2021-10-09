@@ -1,9 +1,19 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Login from './components/Login';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <h2>Hello , World Lets build a rect app</h2>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path = '/'>
+            <Login/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
